@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <base href="/index.html">
-    </head>
     <body>
         <link rel="stylesheet" href="index.css">
             <!-- links css so I can use it -->
@@ -43,9 +40,23 @@
             .content {
                 margin: 35px;
             }
-            .explanations {
+            .buttons {
                 display: flex;
                 justify-content: center;
+            }
+            .link {
+                text-decoration: none;
+                color: #468258;
+                margin: 10px;
+                /* defines the link colors */
+                transition: transform 0.3s ease;
+                /* adds a smooth transition effect to the transform property */
+            }
+            .link:hover {
+                text-decoration: underline;
+                color: #214f2f;
+                transform: scale(1.05);
+                /* scales the text up to 105% when hovered over */
             }
             .title {
                 text-align: center;
@@ -54,24 +65,20 @@
         <nav>
             <ul>
                 <!-- tabs for nav bar -->
-                <li><a class="current" href="">Home</a></li>
-                <li><a class="other" href="about.html">About Me</a></li>              
+                <li><a class="other" href="index.html">Home</a></li>
+                <li><a class="current" href="about.html">About Me</a></li>
             </ul>
         </nav>
         <div class = 'content'>
-            <h1 class="title">Homework Help Site</h1>
+            <h1 class="title">About Me</h1>
             <p>
-            Hello! Welcome to this fun little site I made! I was inspired by my latest Cybersecurity lab 
-            (where we had to do some basic HTML coding to make a fake phishing website) to create a 
-            website that could do some basic calculations, ripped directly from the calculators I already
-            have made in my GitHub.
-            <br><br>
-            I had already made the decimal-binary code, GFC code, and a few other calculators (that I might
-            add later) in Python (on my GitHub if you want to go check them out) because to me it was easier
-            to make some tiny little code do some of my homework for me and it was easier to press a button
-            in VS Code than google 'binary to decimal' every time. And this website makes it even quicker 
-            for me!
+            Welcome to my page! I'm Karina and I'll add more stuff here later if I want to but here are my links if you want to reach out or something:
             </p>
+            <div class="buttons">
+                <a href="https://github.com/KarinaJadia" target="_blank" class="link" >GitHub</a>
+                <a href="https://www.linkedin.com/in/karina-jadia/" target="_blank" class="link" >LinkedIn</a>
+                <a href="mailto:karina.jadia@gmail.com" target="_blank" class="link" >Email</a>
+            </div>
         </div>
     </body>
 </html>
