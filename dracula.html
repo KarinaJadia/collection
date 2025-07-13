@@ -1,67 +1,83 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-        <style>
-            body {
-                background-color: #d8f7d5;
-                margin: 0;
-            }
-            .back {
-                display: inline-block;
-                background-color: transparent;
-                color: #599664;
-                text-decoration: none;
-                padding: 14px 16px;
-                margin: 0;
-            }
-            .back:hover {
-                color: #214f2f;
-            }
-            .content {
-                margin: 35px;
-            }
-            .button {
-                background-color: #bedfc1;
-                border-color:#888888;
-                border-radius: 0.5px;
-            }
-            .button:hover {
-                background-color: #9fc4a2;
-                border-color:#636363;
-            }
-            .title {
-                text-align: center;
-            }
-            .link {
-                text-decoration: none;
-                color: #468258;
-                margin: 10px;
-                transition: transform 0.3s ease;
-            }
-            .link:hover {
-                text-decoration: underline;
-                color: #214f2f;
-                transform: scale(1.05);
-            }
-        </style>
-    </head>
-    <body>
-        <a href="/collection/stories.html" class="back">Back</a>
+<head>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            background-color: #d8f7d5;
+            margin: 0;
+        }
+        nav {
+            background-color: transparent;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        nav li {
+            float: left;
+        }
+        nav li a {
+            display: block;
+            color: #599664;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: sans-serif;
+        }
+        nav li a:hover {
+            color: #214f2f;
+        }
+        .content {
+            margin: 35px;
+        }
+        .button {
+            background-color: #bedfc1;
+            border-color: #888888;
+            border-radius: 0.5px;
+        }
+        .button:hover {
+            background-color: #9fc4a2;
+            border-color: #636363;
+        }
+        .title {
+            text-align: center;
+        }
+        .link {
+            text-decoration: none;
+            color: #468258;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+        .link:hover {
+            text-decoration: underline;
+            color: #214f2f;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/collection/stories.html">← Back</a></li>
+        </ul>
+    </nav>
 
-        <div class="content">
-            <h1 class="title">Dr. Acula</h1>
-            <div class="main-container">
-                <div style="display: flex; gap: 10px; align-items: center;">
-                    <label for="keyInput">enter key:</label>
-                    <input type="text" id="keyInput" name="keyInput">
-                    <button onclick="decryptFromPage('keyInput', 'encryptedText')" class="button">decrypt</button>
-                </div>
-            </div>  
-            <p id="encryptedText" style="word-break: break-all;">
-            01011110010110000001111101011001100010111101100100011000100010111001111100011111010110000101101000011111110110100101111101011111
-            </p>
-        </div>
-        <script src="decrypt.js"></script>
-    </body>
+    <div class="content">
+        <h1 class="title">Dr. Acula</h1>
+        <div class="main-container">
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <label for="keyInput">enter key:</label>
+                <input type="text" id="keyInput" name="keyInput">
+                <button onclick="decryptFromPage('keyInput', 'encryptedText')" class="button">decrypt</button>
+            </div>
+        </div>  
+        <p id="encryptedText" style="word-break: break-all;">
+        01011110010110000001111101011001100010111101100100011000100010111001111100011111010110000101101000011111110110100101111101011111
+        </p>
+    </div>
+    <script src="decrypt.js"></script>
+</body>
 </html>
