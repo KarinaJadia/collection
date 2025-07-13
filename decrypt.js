@@ -8,7 +8,8 @@ function binaryToText(binaryStr) {
 }
 
 function decryptBinary(encryptedBinary, key) {
-    const [k1, k2, k3, k4] = key.map(Number); // ensure key values are numbers
+    // girl did you think you were gonna find the key in here?? good luck!!
+    const [k1, k2, k3, k4] = key.map(Number);
     let decrypted = "";
 
     for (let i = 0; i < encryptedBinary.length; i += 8) {
@@ -18,9 +19,9 @@ function decryptBinary(encryptedBinary, key) {
         }
         let b = parseInt(byte, 2);
 
-        b = ((b << k4) | (b >>> (8 - k4))) & 0xFF; // left rotate
+        b = ((b << k4) | (b >>> (8 - k4))) & 0xFF;
         b ^= k3;
-        b = ((b >>> k2) | (b << (8 - k2))) & 0xFF; // right rotate
+        b = ((b >>> k2) | (b << (8 - k2))) & 0xFF;
         b ^= k1;
 
         decrypted += b.toString(2).padStart(8, '0');
