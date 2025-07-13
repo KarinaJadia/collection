@@ -47,6 +47,20 @@
             .title {
                 text-align: center;
             }
+            .link {
+                text-decoration: none;
+                color: #468258;
+                margin: 10px;
+                /* defines the link colors */
+                transition: transform 0.3s ease;
+                /* adds a smooth transition effect to the transform property */
+            }
+            .link:hover {
+                text-decoration: underline;
+                color: #214f2f;
+                transform: scale(1.05);
+                /* scales the text up to 105% when hovered over */
+            }
         </style>
         <nav>
             <ul>
@@ -59,8 +73,9 @@
         <div class = 'content'>
             <h1 class="title">Stories</h1>
             <p>
-            Welcome to my page! I'm Karina and I feel like if you're here you probably already know enough about me but I copied my old template from my other website and I worked really hard on the CSS of the links below so I'm leaving them here.
+            I'm going to be so honest, I hate frontend designing and I was going to make this a fancy blog card style menu with all of the things I write, but I decided that is too much work for a personal project so I'm just putting buttons, enjoy!
             </p>
         </div>
+        <li><a class="link" href="/collection/dracula.html">Dr. Acula</a></li> 
     </body>
 </html>
