@@ -59,18 +59,23 @@
             </ul>
         </nav>
         <div class = 'content'>
-            <h1 class="title">Homework Help Site</h1>
+            <h1 class="title">Collections</h1>
             <p>
-            Hello! Welcome to this fun little site I made! I was inspired by my latest Cybersecurity lab 
-            (where we had to do some basic HTML coding to make a fake phishing website) to create a 
-            website that could do some basic calculations, ripped directly from the calculators I already
-            have made in my GitHub.
-            <br><br>
-            I had already made the decimal-binary code, GFC code, and a few other calculators (that I might
-            add later) in Python (on my GitHub if you want to go check them out) because to me it was easier
-            to make some tiny little code do some of my homework for me and it was easier to press a button
-            in VS Code than google 'binary to decimal' every time. And this website makes it even quicker 
-            for me!
+            Hello! Welcome to this fun little site I made! I wanted to make and publish short stories but then 
+            I was like "I can't post them to the general public" but then I realized I can if I just encrypt them! 
+            You can decrypt them with a key, try it on this!
+            </p>
+            <div class="main-container">
+                <div class="box">
+                <label for="keyInput">Enter 4-number key:</label>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <input type="text" id="keyInput" name="keyInput">
+                    <button onclick="yourFunction()" class="button">decrypt</button>
+                </div>
+                </div>
+            </div>              
+            <p id="encryptedText" style="word-break: break-all;">
+            1101000100011010100010111101110101011000110111101000101101011011110110110001100010001011000111111101101011011011100110101000101110011110100110011101100101011111100010001000101111011101010110001101111010001011100110011101101100011110110110101000101110011110100110011101101010001011010110011101101011011101110010111000101110010001110110111001111110011111110111011000101100011111110110101101101110011010110110010001100001011010100010110000110111001001
             </p>
         </div>
     </body>
