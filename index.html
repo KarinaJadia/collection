@@ -71,12 +71,10 @@
             You can decrypt them with a key, try it on this!
             </p>
             <div class="main-container">
-                <div class="box">
+                <div style="display: flex; gap: 10px; align-items: center;">
                     <label for="keyInput">enter key:</label>
-                    <div style="display: flex; gap: 10px; align-items: center;">
-                        <input type="text" id="keyInput" name="keyInput">
-                        <button onclick="decryptFromPage('keyInput', 'encryptedText')" class="button">decrypt</button>
-                    </div>
+                    <input type="text" id="keyInput" name="keyInput">
+                    <button onclick="decryptFromPage('keyInput', 'encryptedText')" class="button">decrypt</button>
                 </div>
             </div>              
             <p id="encryptedText" style="word-break: break-all;">
