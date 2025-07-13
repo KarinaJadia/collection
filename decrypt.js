@@ -38,11 +38,12 @@ function decryptFromPage(keyInputId, encryptedContainerId) {
         return;
     }
     const encryptedText = encryptedElem.textContent.trim();
-    const keyParts = keyInput.split(",").map(part => parseInt(part.trim()));
-    if (keyParts.length !== 4 || keyParts.some(isNaN)) {
-        alert("please enter a valid key");
+    
+    if (keyInput.length !== 4 || /\D/.test(keyInput)) {
+        alert("please enter a valid 4-digit numeric key");
         return;
     }
+    const keyParts = keyInput.split("").map(d => parseInt(d));
 
     try {
         const decryptedText = decryptBinary(encryptedText, keyParts);
