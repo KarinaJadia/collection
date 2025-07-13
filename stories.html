@@ -47,12 +47,16 @@
             .title {
                 text-align: center;
             }
+            .buttons {
+                display: flex;
+                justify-content: center;
+            }
             .link {
                 text-decoration: none;
                 color: #468258;
                 margin: 10px;
                 /* defines the link colors */
-                transition: transform 0.3s ease !important;
+                transition: transform 0.3s ease;
                 /* adds a smooth transition effect to the transform property */
             }
             .link:hover {
@@ -75,7 +79,9 @@
             <p>
             I'm going to be so honest, I hate frontend designing and I was going to make this a fancy blog card style menu with all of the things I write, but I decided that is too much work for a personal project so I'm just putting buttons, enjoy!
             </p>
-            <a class="link" href="/collection/dracula.html">Dr. Acula</a>
+            <div class="buttons">
+                <a class="link" href="/collection/dracula.html">Dr. Acula</a>
+            </div>            
         </div>
     </body>
 </html>
