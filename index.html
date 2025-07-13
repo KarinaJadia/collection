@@ -43,12 +43,17 @@
             .content {
                 margin: 35px;
             }
-            .explanations {
-                display: flex;
-                justify-content: center;
-            }
             .title {
                 text-align: center;
+            }
+            .button {
+                background-color: #bedfc1;
+                border-color:#888888;
+                border-radius: 0.5px;
+            }
+            .button:hover {
+                background-color: #9fc4a2;
+                border-color:#636363;
             }
         </style>
         <nav>
@@ -67,16 +72,17 @@
             </p>
             <div class="main-container">
                 <div class="box">
-                <label for="keyInput">Enter 4-number key:</label>
-                <div style="display: flex; gap: 10px; align-items: center;">
-                    <input type="text" id="keyInput" name="keyInput">
-                    <button onclick="yourFunction()" class="button">decrypt</button>
-                </div>
+                    <label for="keyInput">enter key:</label>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <input type="text" id="keyInput" name="keyInput">
+                        <button onclick="decryptFromPage('keyInput', 'encryptedText')" class="button">decrypt</button>
+                    </div>
                 </div>
             </div>              
             <p id="encryptedText" style="word-break: break-all;">
             1101000100011010100010111101110101011000110111101000101101011011110110110001100010001011000111111101101011011011100110101000101110011110100110011101100101011111100010001000101111011101010110001101111010001011100110011101101100011110110110101000101110011110100110011101101010001011010110011101101011011101110010111000101110010001110110111001111110011111110111011000101100011111110110101101101110011010110110010001100001011010100010110000110111001001
             </p>
         </div>
+        <script src="decrypt.js"></script>
     </body>
 </html>
