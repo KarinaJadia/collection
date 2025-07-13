@@ -38,9 +38,9 @@ function decryptFromPage(keyInputId, encryptedContainerId) {
         return;
     }
     const encryptedText = encryptedElem.textContent.trim();
-    
+
     if (keyInput.length !== 4 || /\D/.test(keyInput)) {
-        alert("please enter a valid 4-digit numeric key");
+        alert("please enter a valid key");
         return;
     }
     const keyParts = keyInput.split("").map(d => parseInt(d));
