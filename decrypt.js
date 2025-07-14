@@ -32,7 +32,7 @@ function decryptBinary(encryptedBinary, key) {
 
 function decryptFromPage(keyInputId, encryptedContainerId) {
     const keyInput = document.getElementById(keyInputId)?.value.trim();
-    const encryptedElem = document.getElementById(encryptedContainerId);
+    const encryptedElem = document.getElementById(encryptedContainerId).value;
 
     if (!keyInput || !encryptedElem) {
         alert("missing key or encrypted text");
