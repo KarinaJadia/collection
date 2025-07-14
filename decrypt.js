@@ -33,12 +33,12 @@ function decryptBinary(encryptedBinary, key) {
 function decryptFromPage(keyInputId, encryptedContainerId) {
     const keyInput = document.getElementById(keyInputId)?.value.trim();
     const encryptedElem = document.getElementById(encryptedContainerId);
-    const encryptedText = encryptedElem.getAttribute("value").trim();
 
     if (!keyInput || !encryptedElem) {
         alert("missing key or encrypted text");
         return;
     }
+    const encryptedText = encryptedElem.getAttribute("value").trim();
 
     if (keyInput.length !== 4 || /\D/.test(keyInput)) {
         alert("please enter a valid key");
