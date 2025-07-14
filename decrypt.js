@@ -39,6 +39,7 @@ function decryptFromPage(keyInputId, encryptedContainerId) {
         return;
     }
     const encryptedText = encryptedElem.getAttribute("value").trim();
+    alert(encryptedText);
 
     if (keyInput.length !== 4 || /\D/.test(keyInput)) {
         alert("please enter a valid key");
